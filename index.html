@@ -1,259 +1,275 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+
+<html class="light" lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>text text text text text</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;display=swap"
-        rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MONO_SHOP | Product</title>
+    <!-- Google Fonts: Space Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <!-- Material Symbols -->
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        primary: "#837188",
+                        "on-surface": "#121212",
+                        "surface": "#ffffff",
+                        "surface-container": "#f8f8f8",
+                        "surface-container-highest": "#eeeeee",
+                        "primary": "#121212",
                         "on-primary": "#ffffff",
-                        "primary-container": "#f2edf3",
-                        "on-primary-container": "#332a35",
-                        secondary: "#645c66",
-                        "on-secondary": "#ffffff",
-                        surface: "#faf9fa",
-                        "on-surface": "#1d1b1e",
-                        "surface-variant": "#e9e0eb",
-                        "on-surface-variant": "#4a454d",
-                        outline: "#7b757e",
-                        background: "#faf9fa",
-                        "on-background": "#1d1b1e"
+                        "brand-primary": "#837188",
+                        "outline": "#d1d1d1",
+                        "outline-variant": "#e5e5e5",
+                        "on-surface-variant": "#555555"
                     },
                     fontFamily: {
-                        headline: ["JetBrains Mono", "monospace"],
-                        body: ["JetBrains Mono", "monospace"],
-                        label: ["JetBrains Mono", "monospace"],
-                        display: ["JetBrains Mono", "monospace"],
-                        mono: ["JetBrains Mono", "monospace"]
+                        "headline": ["Space Mono", "monospace"],
+                        "body": ["Space Mono", "monospace"],
+                        "label": ["Space Mono", "monospace"],
+                        "mono": ["Space Mono", "monospace"]
                     },
-                    borderRadius: {
-                        DEFAULT: "0px",
-                        lg: "0px",
-                        xl: "0px",
-                        full: "0px"
-                    }
-                }
-            }
-        };
+                    borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+                },
+            },
+        }
     </script>
     <style>
         body {
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'Space Mono', monospace;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
     </style>
 </head>
 
-<body class="bg-background text-on-surface selection:bg-primary selection:text-on-primary">
-    <!-- TopNavBar - Shared Component -->
-    <header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline/10">
-        <nav class="flex justify-between items-center w-full px-6 md:px-12 py-4 max-w-full mx-auto">
-            <div class="text-xl font-bold tracking-tighter text-on-surface" >1 2 3 4 5&nbsp;</div>
+<body class="bg-surface text-on-surface selection:bg-brand-primary/20">
+    <!-- TopNavBar -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-outline-variant font-mono antialiased top-0 sticky z-50">
+        <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+            <div class="text-xl font-bold tracking-tighter text-on-surface">
+                MONO_SHOP
+            </div>
             <div class="hidden md:flex items-center gap-8">
-                <a class="text-[0.9rem] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
-                    href="#" >Nav 1</a>
-                <a class="text-[0.9rem] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
-                    href="#" >Nav 2</a>
-                <a class="text-[0.9rem] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
-                    href="#" >Nav 3</a>
-                <a class="text-[0.9rem] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
-                    href="#" >Nav 4</a>
+                <a class="text-brand-primary border-b-2 border-brand-primary pb-1" href="#">Features</a>
+                <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Browse</a>
+                <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Components</a>
+                <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Docs</a>
             </div>
-            <div class="flex items-center gap-6">
-                <button
-                    class="text-[1.0rem] uppercase tracking-widest bg-on-surface text-background px-6 py-2 hover:bg-primary hover:text-on-primary transition-all"
-                    >
-                    <div>
-                        ONE</div>
-                </button>
-            </div>
-        </nav>
-    </header>
-    <main class="pt-24">
+            <button class="bg-primary text-on-primary px-5 py-2 text-sm hover:opacity-90 transition-opacity">
+                ONE
+            </button>
+        </div>
+    </nav>
+    <main>
         <!-- Hero Section -->
-        <section class="px-6 md:px-12 py-16 md:py-18 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-            <div class="md:col-span-7">
-                <span class="text-[0.65rem] uppercase tracking-[0.3em] text-primary mb-6 block" >Text</span>
-                <h1 class="text-3xl md:text-5xl leading-[1.2] font-bold text-on-surface mb-8" >text<br>text</h1>
-                <p class="text-on-surface-variant text-sm leading-relaxed max-w-xl mb-10" >
-                    text text text text text text text text text text text text text text text text text text text text
-                    text text text text text text text text text text.
-                </p>
-                <div class="flex flex-wrap gap-6">
-                    <button
-                        class="bg-primary text-on-primary px-8 py-3 text-[0.7rem] uppercase tracking-widest font-bold hover:bg-on-surface transition-all"
-                        >
-                        Button 2
-                    </button>
-                    <button
-                        class="border border-outline/30 text-on-surface px-8 py-3 text-[0.7rem] uppercase tracking-widest hover:border-on-surface transition-all"
-                        >
-                        Button 3
-                    </button>
+        <section class="relative overflow-hidden pt-20 pb-12 md:pt-32 md:pb-24 border-b border-outline-variant">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 border border-outline text-xs font-bold uppercase tracking-widest text-brand-primary">
+                        <span class="relative flex h-2 w-2">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-primary"></span>
+                        </span>
+                        ...newest addition
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-on-surface leading-none">
+                        Product
+                    </h1>
+                    <div class="space-y-4">
+                        <p class="text-on-surface-variant max-w-md text-lg leading-relaxed">
+                            A descriptive text
+                        </p>
+                        <p class="text-sm text-on-surface-variant/80 max-w-md leading-relaxed">
+                            with two paragraphs and different styles
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <button
+                            class="bg-brand-primary text-white px-8 py-4 font-bold hover:brightness-110 transition-all">
+                            Order Now
+                        </button>
+                        <button
+                            class="border border-outline text-on-surface px-8 py-4 font-bold hover:bg-surface-container transition-all flex flex-col items-start leading-none gap-1">
+                            <span>Order Parts</span>
+                            <span class="text-[10px] font-mono text-on-surface-variant uppercase tracking-widest">save
+                                25%</span>
+                        </button>
+                        <button
+                            class="border border-outline text-on-surface px-8 py-4 font-bold hover:bg-surface-container transition-all">
+                            Specs
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="md:col-span-5">
-                <div
-                    class="w-full aspect-square bg-surface-variant flex items-center justify-center border border-outline/10">
-                    <div class="w-full h-full opacity-20"
-                        style="background-image: repeating-linear-gradient(45deg, #837188 0, #837188 1px, transparent 0, transparent 10px); background-size: 14px 14px;">
+                <div class="relative">
+                    <div
+                        class="bg-surface-container border border-outline-variant w-full aspect-square flex items-center justify-center">
+                        <span class="material-symbols-outlined text-6xl text-outline-variant">inventory_2</span>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Features Section (Bento Grid) -->
-        <section class="bg-primary-container/30 py-16 md:py-32 px-6 md:px-12" id="features">
-            <div class="mb-16">
-                <span class="text-[0.65rem] uppercase tracking-[0.3em] text-primary mb-4 block" >text text text
-                    text text</span>
-                <h2 class="text-2xl font-bold tracking-tight" >text text text text text</h2>
+        <section class="py-24 bg-surface">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-16 space-y-4">
+                    <h2 class="text-3xl font-bold tracking-tight text-on-surface uppercase">Features</h2>
+                    <div class="h-1 w-20 bg-brand-primary"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div
+                        class="p-10 bg-surface border border-outline flex flex-col justify-between group hover:border-brand-primary transition-colors">
+                        <div>
+                            <span class="material-symbols-outlined text-brand-primary text-4xl mb-6">waves</span>
+                            <h3 class="text-xl font-bold mb-4">Analog Audio</h3>
+                            <p class="text-on-surface-variant leading-relaxed text-sm">The "ID00" component used onboard
+                                our synths produce high-quality analog audio signals.</p>
+                        </div>
+                        <div class="mt-8 text-xs font-mono text-on-surface-variant/60 uppercase tracking-widest">Quality
+                            01</div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div
+                        class="p-10 bg-brand-primary text-white border border-brand-primary flex flex-col justify-between hover:translate-y-[-4px] transition-transform">
+                        <div>
+                            <span class="material-symbols-outlined text-white text-4xl mb-6">build</span>
+                            <h3 class="text-xl font-bold mb-4">Modular Builds</h3>
+                            <p class="text-white/80 leading-relaxed text-sm">The modular builds allow customization and
+                                expansion, allowing you to tailor your setup to your needs. Enclosures from ...</p>
+                        </div>
+                        <div class="mt-8 text-xs font-mono text-white/60 uppercase tracking-widest">Customization 02
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div
+                        class="p-10 bg-surface border border-outline flex flex-col justify-between group hover:border-brand-primary transition-colors">
+                        <div>
+                            <span class="material-symbols-outlined text-brand-primary text-4xl mb-6">cyclone</span>
+                            <h3 class="text-xl font-bold mb-4">Adaptive Systems</h3>
+                            <p class="text-on-surface-variant leading-relaxed text-sm">One "" = one firmware. Your
+                                ensured with continious updates. Open source</p>
+                        </div>
+                        <div class="mt-8 text-xs font-mono text-on-surface-variant/60 uppercase tracking-widest">
+                            Adaptive 03</div>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div
+                        class="p-10 bg-surface border border-outline flex flex-col justify-between group hover:border-brand-primary transition-colors">
+                        <div>
+                            <span class="material-symbols-outlined text-brand-primary text-4xl mb-6">science</span>
+                            <h3 class="text-xl font-bold mb-4">CC Control</h3>
+                            <p class="text-on-surface-variant leading-relaxed text-sm">With "" software you are able to
+                                manipulate all MIDI messages. Presets or build it yourself. Minimal programming
+                                knowledge.</p>
+                        </div>
+                        <div class="mt-8 text-xs font-mono text-on-surface-variant/60 uppercase tracking-widest">
+                            Insights 04</div>
+                    </div>
+                    <!-- Feature 5 -->
+                    <div
+                        class="p-10 bg-surface border border-outline flex flex-col justify-between group hover:border-brand-primary transition-colors">
+                        <div>
+                            <span class="material-symbols-outlined text-brand-primary text-4xl mb-6">piano</span>
+                            <h3 class="text-xl font-bold mb-4">Poly Aftertouch</h3>
+                            <p class="text-on-surface-variant leading-relaxed text-sm">Full expression control across
+                                every key for nuanced performance.</p>
+                        </div>
+                        <div class="mt-8 text-xs font-mono text-on-surface-variant/60 uppercase tracking-widest">
+                            Insights 05</div>
+                    </div>
+                    <!-- Feature 6 -->
+                    <div
+                        class="p-10 bg-surface border border-outline flex flex-col justify-between group hover:border-brand-primary transition-colors">
+                        <div>
+                            <span class="material-symbols-outlined text-brand-primary text-4xl mb-6">power</span>
+                            <h3 class="text-xl font-bold mb-4">Battery</h3>
+                            <p class="text-on-surface-variant leading-relaxed text-sm">Optimized power consumption for
+                                extended portable sessions.</p>
+                        </div>
+                        <div class="mt-8 text-xs font-mono text-on-surface-variant/60 uppercase tracking-widest">
+                            Insights 06</div>
+                    </div>
+                </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Feature 1 -->
-                <div class="bg-background p-8 border border-outline/10 hover:border-primary/50 transition-colors">
-                    <span class="material-symbols-outlined text-3xl mb-6 block text-primary" data-icon="architecture"
-                        >architecture</span>
-                    <h3 class="text-base font-bold mb-4" >text text text text text</h3>
-                    <p class="text-xs text-on-surface-variant leading-relaxed mb-8" >
-                        text text text text text text text text text text text text text text text text text text text
-                        text text text text text.
-                    </p>
-                    <div class="pt-4 border-t border-outline/5">
-                        <span class="text-[0.55rem] uppercase tracking-widest text-outline" >text</span>
-                    </div>
-                </div>
-                <!-- Feature 2 -->
-                <div class="bg-background p-8 border border-outline/10 hover:border-primary/50 transition-colors">
-                    <span class="material-symbols-outlined text-3xl mb-6 block text-primary" data-icon="layers"
-                        >layers</span>
-                    <h3 class="text-base font-bold mb-4" >text text text text text</h3>
-                    <p class="text-xs text-on-surface-variant leading-relaxed mb-8" >
-                        text text text text text text text text text text text text text text text text text text text
-                        text text text text text.
-                    </p>
-                    <div class="pt-4 border-t border-outline/5">
-                        <span class="text-[0.55rem] uppercase tracking-widest text-outline" >text</span>
-                    </div>
-                </div>
-                <!-- Feature 3 -->
-                <div class="bg-primary text-on-primary p-8 border border-primary">
-                    <span class="material-symbols-outlined text-3xl mb-6 block" data-icon="edit_note"
-                        >edit_note</span>
-                    <h3 class="text-base font-bold mb-4" >text text text text text</h3>
-                    <p class="text-xs opacity-80 leading-relaxed mb-8" >
-                        text text text text text text text text text text text text text text text text text text text
-                        text text text text text.
-                    </p>
-                    <div class="pt-4 border-t border-on-primary/10">
-                        <span class="text-[0.55rem] uppercase tracking-widest opacity-60" >text</span>
-                    </div>
+        </section>
+        <!-- Call to Action -->
+        <section class="py-24 bg-surface-container-highest border-t border-outline-variant">
+            <div class="max-w-3xl mx-auto px-6 text-center space-y-8">
+                <h2 class="text-4xl font-bold tracking-tighter uppercase">Playground</h2>
+                <p class="text-on-surface-variant text-lg">The playground lets you experiment with different features and
+                    settings. Giving you immediate feedback and insights.</p>
+                <p class="text-on-surface-variant text-lg">Including price comparisons and performance metrics.</p>
+                <div class="flex justify-center gap-4">
+                    <button class="bg-primary text-on-primary px-10 py-5 font-bold hover:bg-on-surface/90 transition-colors">
+                        BUTTON
+                    </button>
                 </div>
             </div>
         </section>
         <!-- About Section -->
-        <section class="py-16 md:py-32 px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center"
-            id="about">
-            <div class="order-2 md:order-1">
-                <div class="bg-surface-variant w-full aspect-[4/5] relative border border-outline/10">
-                    <div
-                        class="absolute inset-0 opacity-10 bg-[radial-gradient(#837188_1px,transparent_1px)] [background-size:16px_16px]">
+        <section class="py-24 border-t border-outline-variant">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col lg:flex-row gap-16 items-center">
+                    <div class="w-full lg:w-1/2 order-2 lg:order-1">
+                        <div
+                            class="bg-surface-container-highest border border-outline aspect-[4/3] flex items-center justify-center">
+                            <span class="material-symbols-outlined text-6xl text-outline">info</span>
+                        </div>
                     </div>
-                    <div class="absolute bottom-6 left-6 right-6 bg-background/90 p-6 border border-outline/10">
-                        <p class="text-[0.6rem] leading-relaxed uppercase tracking-[0.1em] text-on-surface-variant"
-                            >"text"</p>
-                    </div>
-                </div>
-            </div>
-            <div class="order-1 md:order-2">
-                <span class="text-[0.65rem] uppercase tracking-[0.3em] text-primary mb-6 block" >text</span>
-                <h2 class="text-2xl md:text-4xl font-bold mb-8 leading-tight" >text</h2>
-                <div class="space-y-6 text-sm text-on-surface-variant leading-relaxed">
-                    <p class="" >text</p>
-                    <p class="" >text</p>
-                </div>
-                <div class="mt-10 flex gap-12">
-                    <div>
-                        <div class="text-xl font-bold mb-1" >text text</div>
-                        <div class="text-[0.55rem] uppercase tracking-widest text-outline" >text text text text
-                            text</div>
-                    </div>
-                    <div>
-                        <div class="text-xl font-bold mb-1" >text text</div>
-                        <div class="text-[0.55rem] uppercase tracking-widest text-outline" >text text text text
-                            text</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Secondary Features / Stats -->
-        <section class="bg-on-surface text-background py-20 px-6 md:px-12">
-            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-16">
-                <div class="max-w-md">
-                    <h3 class="text-xl font-bold mb-6 italic" >"text text text text text"</h3>
-                    <p class="text-[0.7rem] opacity-60 leading-relaxed uppercase tracking-wider" >
-                        text text text text text text text text text text text text text text text text text text text
-                        text text text text text.
-                    </p>
-                </div>
-                <div class="grid grid-cols-2 gap-8 md:gap-20">
-                    <div class="border-l border-background/20 pl-6">
-                        <span class="text-[0.55rem] uppercase tracking-[0.3em] block mb-3 opacity-60" >text text
-                            text text text</span>
-                        <p class="text-lg font-bold" >text text text text text</p>
-                    </div>
-                    <div class="border-l border-background/20 pl-6">
-                        <span class="text-[0.55rem] uppercase tracking-[0.3em] block mb-3 opacity-60" >text text
-                            text text text</span>
-                        <p class="text-lg font-bold" >text text text text text</p>
+                    <div class="w-full lg:w-1/2 space-y-8 order-1 lg:order-2">
+                        <h2 class="text-4xl font-bold tracking-tight text-on-surface uppercase">About</h2>
+                        <div class="space-y-6">
+                            <div class="p-6 border-l-4 border-brand-primary bg-surface-container">
+                                <p class="text-on-surface font-bold italic">text text</p>
+                                <p class="text-on-surface font-bold italic">text text</p>
+                                <p class="text-on-surface font-bold italic">text text</p>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="p-4 border border-outline">
+                                    <div class="text-2xl font-bold text-brand-primary">100%</div>
+                                    <div class="text-xs text-on-surface-variant uppercase tracking-tighter">text text
+                                        text</div>
+                                </div>
+                                <div class="p-4 border border-outline">
+                                    <div class="text-2xl font-bold text-brand-primary">..</div>
+                                    <div class="text-xs text-on-surface-variant uppercase tracking-tighter">text text
+                                        text</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <!-- Footer - Shared Component -->
-    <footer
-        class="w-full py-16 px-6 md:px-12 bg-surface-variant/30 flex flex-col md:flex-row justify-between items-start gap-12 border-t border-outline/5">
-        <div class="space-y-4">
-            <div class="text-base font-bold tracking-tighter uppercase" >text text text text text</div>
-            <p class="text-[0.65rem] tracking-widest uppercase text-on-surface-variant max-w-xs leading-loose" >
-                text text text text text text text text text text text text text text text text text text text text text
-                text text text.
-            </p>
-        </div>
-        <div class="flex flex-col md:flex-row gap-12 md:gap-24">
-            <div class="flex flex-col gap-3">
-                <span class="text-[0.55rem] text-primary uppercase tracking-widest mb-2 font-bold" >text text
-                    text text text</span>
-                <a class="text-[0.65rem] tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors"
-                    href="#" >Nav Item 5</a>
-                <a class="text-[0.65rem] tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors"
-                    href="#" >Nav Item 6</a>
+    <!-- Footer -->
+    <footer class="bg-white border-t border-outline-variant font-mono text-sm">
+        <div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 w-full gap-4 max-w-7xl mx-auto">
+            <div class="text-lg font-bold text-on-surface">
+                MONO_SHOP
             </div>
-            <div class="flex flex-col gap-3">
-                <span class="text-[0.55rem] text-primary uppercase tracking-widest mb-2 font-bold" >text text
-                    text text text</span>
-                <a class="text-[0.65rem] tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors"
-                    href="#" >Nav Item 7</a>
-                <a class="text-[0.65rem] tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors"
-                    href="#" >Nav Item 8</a>
+            <div class="flex items-center gap-6">
+                <a class="text-on-surface-variant hover:text-brand-primary transition-colors" href="#">Privacy</a>
+                <a class="text-on-surface-variant hover:text-brand-primary transition-colors" href="#">Terms</a>
+                <a class="text-on-surface-variant hover:text-brand-primary transition-colors" href="#">Github</a>
             </div>
-        </div>
-        <div class="md:text-right">
-            <p class="text-[0.65rem] tracking-widest uppercase text-outline" >
-                © text text text text text text text text text text text text.
-            </p>
+            <div class="text-on-surface-variant/60">
+                © 2024 MONO_SHOP.
+            </div>
         </div>
     </footer>
 </body>
+
 </html>
