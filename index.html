@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>text text text text text</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#837188",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#f2edf3",
+                        "on-primary-container": "#332a35",
+                        secondary: "#645c66",
+                        "on-secondary": "#ffffff",
+                        surface: "#faf9fa",
+                        "on-surface": "#1d1b1e",
+                        "surface-variant": "#e9e0eb",
+                        "on-surface-variant": "#4a454d",
+                        outline: "#7b757e",
+                        background: "#faf9fa",
+                        "on-background": "#1d1b1e"
+                    },
+                    fontFamily: {
+                        headline: ["JetBrains Mono", "monospace"],
+                        body: ["JetBrains Mono", "monospace"],
+                        label: ["JetBrains Mono", "monospace"],
+                        display: ["JetBrains Mono", "monospace"],
+                        mono: ["JetBrains Mono", "monospace"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0px",
+                        lg: "0px",
+                        xl: "0px",
+                        full: "0px"
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'JetBrains Mono', monospace;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface selection:bg-primary selection:text-on-primary">
+    <!-- TopNavBar - Shared Component -->
+    <header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline/10">
+        <nav class="flex justify-between items-center w-full px-6 md:px-12 py-4 max-w-full mx-auto">
+            <div class="text-xl font-bold tracking-tighter text-on-surface" >1 2 3 4 5&nbsp;</div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-[0.9rem] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
+                    href="#" >Nav 1</a>
+                <a class="text-[0.9rem] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
+                    href="#" >Nav 2</a>
+                <a class="text-[0.9rem] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
+                    href="#" >Nav 3</a>
+                <a class="text-[0.9rem] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
+                    href="#" >Nav 4</a>
+            </div>
+            <div class="flex items-center gap-6">
+                <button
+                    class="text-[1.0rem] uppercase tracking-widest bg-on-surface text-background px-6 py-2 hover:bg-primary hover:text-on-primary transition-all"
+                    >
+                    <div>
+                        ONE</div>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="px-6 md:px-12 py-16 md:py-18 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7">
+                <span class="text-[0.65rem] uppercase tracking-[0.3em] text-primary mb-6 block" >Text</span>
+                <h1 class="text-3xl md:text-5xl leading-[1.2] font-bold text-on-surface mb-8" >text<br>text</h1>
+                <p class="text-on-surface-variant text-sm leading-relaxed max-w-xl mb-10" >
+                    text text text text text text text text text text text text text text text text text text text text
+                    text text text text text text text text text text.
+                </p>
+                <div class="flex flex-wrap gap-6">
+                    <button
+                        class="bg-primary text-on-primary px-8 py-3 text-[0.7rem] uppercase tracking-widest font-bold hover:bg-on-surface transition-all"
+                        >
+                        Button 2
+                    </button>
+                    <button
+                        class="border border-outline/30 text-on-surface px-8 py-3 text-[0.7rem] uppercase tracking-widest hover:border-on-surface transition-all"
+                        >
+                        Button 3
+                    </button>
+                </div>
+            </div>
+            <div class="md:col-span-5">
+                <div
+                    class="w-full aspect-square bg-surface-variant flex items-center justify-center border border-outline/10">
+                    <div class="w-full h-full opacity-20"
+                        style="background-image: repeating-linear-gradient(45deg, #837188 0, #837188 1px, transparent 0, transparent 10px); background-size: 14px 14px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Features Section (Bento Grid) -->
+        <section class="bg-primary-container/30 py-16 md:py-32 px-6 md:px-12" id="features">
+            <div class="mb-16">
+                <span class="text-[0.65rem] uppercase tracking-[0.3em] text-primary mb-4 block" >text text text
+                    text text</span>
+                <h2 class="text-2xl font-bold tracking-tight" >text text text text text</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-background p-8 border border-outline/10 hover:border-primary/50 transition-colors">
+                    <span class="material-symbols-outlined text-3xl mb-6 block text-primary" data-icon="architecture"
+                        >architecture</span>
+                    <h3 class="text-base font-bold mb-4" >text text text text text</h3>
+                    <p class="text-xs text-on-surface-variant leading-relaxed mb-8" >
+                        text text text text text text text text text text text text text text text text text text text
+                        text text text text text.
+                    </p>
+                    <div class="pt-4 border-t border-outline/5">
+                        <span class="text-[0.55rem] uppercase tracking-widest text-outline" >text</span>
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-background p-8 border border-outline/10 hover:border-primary/50 transition-colors">
+                    <span class="material-symbols-outlined text-3xl mb-6 block text-primary" data-icon="layers"
+                        >layers</span>
+                    <h3 class="text-base font-bold mb-4" >text text text text text</h3>
+                    <p class="text-xs text-on-surface-variant leading-relaxed mb-8" >
+                        text text text text text text text text text text text text text text text text text text text
+                        text text text text text.
+                    </p>
+                    <div class="pt-4 border-t border-outline/5">
+                        <span class="text-[0.55rem] uppercase tracking-widest text-outline" >text</span>
+                    </div>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-primary text-on-primary p-8 border border-primary">
+                    <span class="material-symbols-outlined text-3xl mb-6 block" data-icon="edit_note"
+                        >edit_note</span>
+                    <h3 class="text-base font-bold mb-4" >text text text text text</h3>
+                    <p class="text-xs opacity-80 leading-relaxed mb-8" >
+                        text text text text text text text text text text text text text text text text text text text
+                        text text text text text.
+                    </p>
+                    <div class="pt-4 border-t border-on-primary/10">
+                        <span class="text-[0.55rem] uppercase tracking-widest opacity-60" >text</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section class="py-16 md:py-32 px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center"
+            id="about">
+            <div class="order-2 md:order-1">
+                <div class="bg-surface-variant w-full aspect-[4/5] relative border border-outline/10">
+                    <div
+                        class="absolute inset-0 opacity-10 bg-[radial-gradient(#837188_1px,transparent_1px)] [background-size:16px_16px]">
+                    </div>
+                    <div class="absolute bottom-6 left-6 right-6 bg-background/90 p-6 border border-outline/10">
+                        <p class="text-[0.6rem] leading-relaxed uppercase tracking-[0.1em] text-on-surface-variant"
+                            >"text"</p>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 md:order-2">
+                <span class="text-[0.65rem] uppercase tracking-[0.3em] text-primary mb-6 block" >text</span>
+                <h2 class="text-2xl md:text-4xl font-bold mb-8 leading-tight" >text</h2>
+                <div class="space-y-6 text-sm text-on-surface-variant leading-relaxed">
+                    <p class="" >text</p>
+                    <p class="" >text</p>
+                </div>
+                <div class="mt-10 flex gap-12">
+                    <div>
+                        <div class="text-xl font-bold mb-1" >text text</div>
+                        <div class="text-[0.55rem] uppercase tracking-widest text-outline" >text text text text
+                            text</div>
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold mb-1" >text text</div>
+                        <div class="text-[0.55rem] uppercase tracking-widest text-outline" >text text text text
+                            text</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Secondary Features / Stats -->
+        <section class="bg-on-surface text-background py-20 px-6 md:px-12">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-16">
+                <div class="max-w-md">
+                    <h3 class="text-xl font-bold mb-6 italic" >"text text text text text"</h3>
+                    <p class="text-[0.7rem] opacity-60 leading-relaxed uppercase tracking-wider" >
+                        text text text text text text text text text text text text text text text text text text text
+                        text text text text text.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-8 md:gap-20">
+                    <div class="border-l border-background/20 pl-6">
+                        <span class="text-[0.55rem] uppercase tracking-[0.3em] block mb-3 opacity-60" >text text
+                            text text text</span>
+                        <p class="text-lg font-bold" >text text text text text</p>
+                    </div>
+                    <div class="border-l border-background/20 pl-6">
+                        <span class="text-[0.55rem] uppercase tracking-[0.3em] block mb-3 opacity-60" >text text
+                            text text text</span>
+                        <p class="text-lg font-bold" >text text text text text</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer - Shared Component -->
+    <footer
+        class="w-full py-16 px-6 md:px-12 bg-surface-variant/30 flex flex-col md:flex-row justify-between items-start gap-12 border-t border-outline/5">
+        <div class="space-y-4">
+            <div class="text-base font-bold tracking-tighter uppercase" >text text text text text</div>
+            <p class="text-[0.65rem] tracking-widest uppercase text-on-surface-variant max-w-xs leading-loose" >
+                text text text text text text text text text text text text text text text text text text text text text
+                text text text.
+            </p>
+        </div>
+        <div class="flex flex-col md:flex-row gap-12 md:gap-24">
+            <div class="flex flex-col gap-3">
+                <span class="text-[0.55rem] text-primary uppercase tracking-widest mb-2 font-bold" >text text
+                    text text text</span>
+                <a class="text-[0.65rem] tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors"
+                    href="#" >Nav Item 5</a>
+                <a class="text-[0.65rem] tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors"
+                    href="#" >Nav Item 6</a>
+            </div>
+            <div class="flex flex-col gap-3">
+                <span class="text-[0.55rem] text-primary uppercase tracking-widest mb-2 font-bold" >text text
+                    text text text</span>
+                <a class="text-[0.65rem] tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors"
+                    href="#" >Nav Item 7</a>
+                <a class="text-[0.65rem] tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors"
+                    href="#" >Nav Item 8</a>
+            </div>
+        </div>
+        <div class="md:text-right">
+            <p class="text-[0.65rem] tracking-widest uppercase text-outline" >
+                © text text text text text text text text text text text text.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
